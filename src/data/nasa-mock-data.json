@@ -1,0 +1,160 @@
+{
+  "businessCategories": {
+    "SatCom": {
+      "averageLaunchCost": 62000000,
+      "averagePayloadMass": 6000,
+      "debrisRiskFactor": 0.15,
+      "baseScoreBias": {
+        "financial": 85,
+        "debris": 70,
+        "regulatory": 80
+      },
+      "marketSize": 350000000000,
+      "typicalRevenue": {
+        "min": 100000000,
+        "max": 5000000000
+      }
+    },
+    "EarthObservation": {
+      "averageLaunchCost": 45000000,
+      "averagePayloadMass": 3500,
+      "debrisRiskFactor": 0.12,
+      "baseScoreBias": {
+        "financial": 75,
+        "debris": 85,
+        "regulatory": 90
+      },
+      "marketSize": 15000000000,
+      "typicalRevenue": {
+        "min": 50000000,
+        "max": 2000000000
+      }
+    },
+    "InSpaceManufacturing": {
+      "averageLaunchCost": 120000000,
+      "averagePayloadMass": 15000,
+      "debrisRiskFactor": 0.25,
+      "baseScoreBias": {
+        "financial": 60,
+        "debris": 50,
+        "regulatory": 65
+      },
+      "marketSize": 5000000000,
+      "typicalRevenue": {
+        "min": 500000000,
+        "max": 10000000000
+      }
+    },
+    "LEOInfrastructure": {
+      "averageLaunchCost": 180000000,
+      "averagePayloadMass": 25000,
+      "debrisRiskFactor": 0.35,
+      "baseScoreBias": {
+        "financial": 70,
+        "debris": 40,
+        "regulatory": 60
+      },
+      "marketSize": 25000000000,
+      "typicalRevenue": {
+        "min": 1000000000,
+        "max": 50000000000
+      }
+    }
+  },
+  "launchVehicles": {
+    "Reusable": {
+      "costMultiplier": 0.6,
+      "debrisRiskModifier": -0.1,
+      "reliabilityScore": 95
+    },
+    "Expendable": {
+      "costMultiplier": 1.0,
+      "debrisRiskModifier": 0.05,
+      "reliabilityScore": 98
+    },
+    "SmallDedicated": {
+      "costMultiplier": 0.4,
+      "debrisRiskModifier": -0.05,
+      "reliabilityScore": 92
+    }
+  },
+  "orbitalAltitudes": {
+    "200-400": {
+      "debrisRiskFactor": 0.8,
+      "operationalComplexity": 1.2,
+      "atmosphericDrag": 0.9
+    },
+    "400-600": {
+      "debrisRiskFactor": 1.0,
+      "operationalComplexity": 1.0,
+      "atmosphericDrag": 0.7
+    },
+    "600-1000": {
+      "debrisRiskFactor": 1.3,
+      "operationalComplexity": 0.9,
+      "atmosphericDrag": 0.4
+    },
+    "1000+": {
+      "debrisRiskFactor": 1.8,
+      "operationalComplexity": 0.8,
+      "atmosphericDrag": 0.1
+    }
+  },
+  "deorbitMethods": {
+    "ActivePropulsion": {
+      "reliabilityScore": 95,
+      "costFactor": 1.3,
+      "regulatoryBonus": 20
+    },
+    "DragEnhancement": {
+      "reliabilityScore": 85,
+      "costFactor": 1.1,
+      "regulatoryBonus": 15
+    },
+    "DebrisRemovalService": {
+      "reliabilityScore": 90,
+      "costFactor": 1.5,
+      "regulatoryBonus": 25
+    }
+  },
+  "ssaStrategies": {
+    "Commercial": {
+      "accuracyScore": 90,
+      "costFactor": 1.2,
+      "regulatoryBonus": 15
+    },
+    "InHouse": {
+      "accuracyScore": 95,
+      "costFactor": 2.0,
+      "regulatoryBonus": 20
+    },
+    "PublicData": {
+      "accuracyScore": 70,
+      "costFactor": 0.8,
+      "regulatoryBonus": 5
+    }
+  },
+  "targetMarkets": {
+    "Government": {
+      "contractStability": 95,
+      "paymentReliability": 98,
+      "regulatoryComplexity": 1.5
+    },
+    "Enterprise": {
+      "contractStability": 80,
+      "paymentReliability": 85,
+      "regulatoryComplexity": 1.2
+    },
+    "DirectConsumer": {
+      "contractStability": 60,
+      "paymentReliability": 75,
+      "regulatoryComplexity": 1.0
+    }
+  },
+  "scoringWeights": {
+    "financial": 0.35,
+    "debris": 0.25,
+    "regulatory": 0.25,
+    "technical": 0.15
+  }
+}
