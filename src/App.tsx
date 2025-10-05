@@ -105,7 +105,6 @@ function App() {
           <EnhancedDashboard
             formData={formData}
             onBack={handleBackToForm}
-            onFormDataChange={handleFormChange}
           />
         )}
       </div>

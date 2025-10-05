@@ -14,10 +14,9 @@ import html2canvas from 'html2canvas';
 interface EnhancedDashboardProps {
   formData: FormData;
   onBack: () => void;
-  onFormDataChange?: (data: FormData) => void;
 }
 
-const EnhancedDashboard: React.FC<EnhancedDashboardProps> = ({ formData, onBack, onFormDataChange }) => {
+const EnhancedDashboard: React.FC<EnhancedDashboardProps> = ({ formData, onBack }) => {
   const [scores, setScores] = useState({ overall: 0, financial: 0, debris: 0, regulatory: 0 });
   const [aiReport, setAiReport] = useState<GeminiReport | null>(null);
   const [loading, setLoading] = useState(true);
@@ -266,7 +265,7 @@ const EnhancedDashboard: React.FC<EnhancedDashboardProps> = ({ formData, onBack,
             <AgencyComparison />
 
             {/* Vendor Cost Comparison by Stage */}
-            <VendorCostComparison formData={formData} onFormDataChange={onFormDataChange} />
+            <VendorCostComparison formData={formData} />
 
             {/* Mission Timeline */}
             <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg shadow-md">
